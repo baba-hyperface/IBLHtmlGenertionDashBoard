@@ -1,0 +1,21 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    max-width: 40%;
+    text-align: center;
+    margin: 10px;
+}
+.iblOffers{
+    padding: 10px 15px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font-weight: 700;
+    border-bottom: 1px solid rgb(44, 42, 42);
+}
+.HtmlGenerator{
+    width: 100%;
+}
