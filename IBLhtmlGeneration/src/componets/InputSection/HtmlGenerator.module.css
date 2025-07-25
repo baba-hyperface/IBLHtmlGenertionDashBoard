@@ -1,0 +1,101 @@
+.main {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    /* border: 1px solid green; */
+    position: relative;
+    min-height: 450px;
+}
+
+.main1 {
+    width: 80%;
+    height: 370px;
+    top: 30px;
+    left: 30px;
+    position: absolute;
+}
+
+.iblOffers {
+    padding: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    font-weight: 700;
+    border: 1px dashed;
+    /* border-bottom: 1px solid rgb(180, 42, 42); */
+}
+
+.HtmlTemplateSelector {
+    width: 100%;
+    padding: 20px;
+    border: 1px dashed;
+    box-sizing: border-box;
+    /* border-bottom: 1px solid red; */
+}
+
+.csvInput {
+    width: 100%;
+}
+
+.buttons {
+    padding: 12px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px dashed;
+}
+
+.submitBtn {
+    background-color: rgb(81, 81, 231);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+
+}
+
+.submitBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.downloadBtn {
+    background-color: rgb(224, 224, 233);
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.downloadBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.dividerbox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.previewContainer {
+    border: 1px solid;
+    min-height: 80vh;
+    min-height: 80dvh;
+    max-height: 90vh;
+    max-height: 90dvh;
+    overflow-y: auto;
+}

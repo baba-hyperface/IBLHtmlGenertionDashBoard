@@ -1,4 +1,4 @@
-export function getTemplate1(data, TemplateHelpers, lightColor) {
+export function getTemplate1({data, TemplateHelpers, lightColor}) {
   return `<html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">

@@ -1,0 +1,14 @@
+.previewContainer {
+  max-width: 600px;
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  padding: 0px 20px 20px ;
+  background: #f9f9f9;
+  overflow: auto;
+}
+
+.previewBox {
+  border: 1px dashed #aaa;
+  overflow-x: auto;
+  background-color: white;
+}

@@ -1,12 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import { IBLOffers } from './componets/UnputSection/IBLOffers';
+import { SharedProvider } from './componets/contextapi/SharedContext';
+import { IBLOffers } from './componets/InputSection/IBLOffers';
 
 function App() {
   return (
-    <div className="App">
+    <SharedProvider>
       <IBLOffers/>
-    </div>
+    </SharedProvider>
   );
 }
 

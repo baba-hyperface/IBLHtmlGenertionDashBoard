@@ -1,8 +1,10 @@
 import tinycolor from 'tinycolor2';
 import { getTemplate1 } from '../Templates/T1';
 
-export const htmlTemplatepreview = async (data, templateName) => {
-    if (!data) {
+export const htmlTemplatepreview = async ({data, templateName}) => {
+    console.log("function data",data);
+    console.log("function templatename",templateName);
+    if (!data || !templateName) {
         console.warn("No data provided. Template may contain placeholders.");
         data = {};
     }
@@ -299,13 +301,10 @@ export const htmlTemplatepreview = async (data, templateName) => {
 
     if (templateMap[templateName]) {
         selectedTemplate = await templateMap[templateName]({
-            // additionalScope: {
                 data: data,
                 TemplateHelpers: TemplateHelpers,
                 lightColor: lightColor,
-                functionName: "preview"
-            // },
-        });
+    });
     } else {
         selectedTemplate = '<div>wrong template selected</div>';
     }
@@ -313,8 +312,10 @@ export const htmlTemplatepreview = async (data, templateName) => {
 }
 
 
-export const htmlTemplate = async (data, templateName) => {
-    if (!data) {
+export const htmlTemplate = async ({data, templateName}) => {
+    console.log("function data",data);
+    console.log("templatename1",templateName);
+    if (!data || !templateName) {
         console.warn("No data provided. Template may contain placeholders.");
         data = {};
     }
@@ -597,7 +598,7 @@ export const htmlTemplate = async (data, templateName) => {
     const lightColor = isLightColor(data.color || "#ffffff");
     let selectedTemplate;
     const templateMap = {
-        // template1: T1_1Brand_indusMoments_1Offer_1PromoCode,
+        template1: getTemplate1,
         // template2: T2_1Brand_indusMoments_2Offer_2PromoCode,
         // template3: T3_2Brand_indusMoment_2Brands_1Offer,
         // template4: T4_1Brand_Network_2Offer_2promoCode,
@@ -609,14 +610,12 @@ export const htmlTemplate = async (data, templateName) => {
         // template10: PT10_4Brand_network_4Brand_1Offer,
     };
     if (templateMap[templateName]) {
-        selectedTemplate = await templateMap[templateName].trigger({
-            additionalScope: {
+        selectedTemplate = await templateMap[templateName]({
                 data: data,
                 TemplateHelpers: TemplateHelpers,
                 lightColor: lightColor,
-                functionName: "generate"
-            },
-        });
+        
+    });
     } else {
         selectedTemplate = '<div>wrong template selected</div>';
     }
