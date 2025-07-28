@@ -92,7 +92,7 @@
 }
 
 .previewContainer {
-    border: 1px solid;
+    border-left: 1px solid;
     min-height: 80vh;
     min-height: 80dvh;
     max-height: 90vh;
