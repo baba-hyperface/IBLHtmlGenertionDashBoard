@@ -12,3 +12,20 @@
   overflow-x: auto;
   background-color: white;
 }
+
+.submitBtn {
+  background-color: rgb(225, 225, 240);
+  color: #060606;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.csvbuttoncontainer{
+  display: flex;
+  justify-content: space-around;
+}

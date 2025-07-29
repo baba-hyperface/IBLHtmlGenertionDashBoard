@@ -10,7 +10,7 @@ import { Htmlshowcasing } from '../OutPutSection/Htmlshowcasing';
 
 
 export const HtmlGenerator = () => {
-  const [selectedTemplate, setSelectedTemplate] = useState(null);
+  
   //   const [selectedTemplateName,setSelectedTemplateName] = useState("");
   const [csvFileInput, setCsvFile] = useState(null);
   const [images, setImages] = useState([]);
@@ -20,7 +20,8 @@ export const HtmlGenerator = () => {
   const { templateVariables, setTemplateVariables,
     DownloadAccess, setDownloadAccess,
     CSVFileAccess, setCSVFileAccess,
-    HTMLData, setHtmlData
+    HTMLData, setHtmlData,
+    selectedTemplate, setSelectedTemplate
   } = useContext(SharedContext);
   const [submitAccess,setSubmitAccess]=useState(false);
   
@@ -229,9 +230,8 @@ export const HtmlGenerator = () => {
   };
 
   const handleTemplateChange = async (selected) => {
-    console.log(" handleTemplateChange selected", selected);
-    setSelectedTemplate(selected); // still async, that's fine here
-
+    setSelectedTemplate(selected); 
+    setCSVFileAccess(true); 
     if (Allvariables[selected?.value]) {
       const joinedVars = Allvariables[selected?.value].join(", ");
       setTemplateVariables(joinedVars);
@@ -239,7 +239,6 @@ export const HtmlGenerator = () => {
       console.warn("Template not found in Allvariables");
     }
 
-    setCSVFileAccess(false); // outside if/else, runs always
     console.log("template variables", templateVariables);
     const realValues = {
       color: "#FFFFFF"

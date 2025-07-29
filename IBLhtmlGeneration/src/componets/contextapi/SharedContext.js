@@ -11,13 +11,15 @@ export const SharedProvider = ({ children }) => {
   const [HTMLData, setHtmlData] = useState("");
     const [DownloadAccess,setDownloadAccess]= useState(false);
     const [CSVFileAccess,setCSVFileAccess] = useState(false);
+  const [selectedTemplate, setSelectedTemplate] = useState(null);
 
   return (
     <SharedContext.Provider value={{
       templateVariables, setTemplateVariables,
       HTMLData, setHtmlData,
       DownloadAccess,setDownloadAccess,
-      CSVFileAccess,setCSVFileAccess
+      CSVFileAccess,setCSVFileAccess,
+      selectedTemplate, setSelectedTemplate
     }}>
       {children}
     </SharedContext.Provider>

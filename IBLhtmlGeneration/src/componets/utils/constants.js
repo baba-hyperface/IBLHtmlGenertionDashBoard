@@ -191,4 +191,3 @@ export const Allvariables = {
 
 export let DownloadAccess = true;
 export let TemplateVariables = "Whatever variables are dynamic in the HTML, you'll see them here.";
-export let CSVFileAccess = true;
